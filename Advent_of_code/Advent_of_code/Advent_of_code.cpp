@@ -161,11 +161,13 @@ int day_3(void)
 
         std::vector<int> firstComp(rucksack.begin(), rucksack.begin() + half_size);
         std::vector<int> secondComp(rucksack.begin() + half_size, rucksack.end());
+        std::cout << std::endl;
+
 
         std::sort(firstComp.begin(), firstComp.end());
         std::sort(secondComp.begin(), secondComp.end());
         std::size_t firstHalfSize = firstComp.size() / 2;
-        std::size_t secondHalfSize = firstComp.size() / 2;
+        std::size_t secondHalfSize = secondComp.size() / 2;
 
 
         std::vector<int> checkedPrio;
@@ -175,7 +177,7 @@ int day_3(void)
             std::vector<int>::iterator itStart;
             std::vector<int>::iterator itEnd;
 
-            if(element > secondComp.at(secondHalfSize))
+            if(element >= secondComp.at(secondHalfSize))
             {
                 itStart = secondComp.begin() + secondHalfSize;
                 itEnd = secondComp.end();
@@ -186,7 +188,7 @@ int day_3(void)
                 itEnd = secondComp.begin() + secondHalfSize;
             }
             
-            for (; itStart != itEnd; ++itStart)
+            for (; itStart != itEnd; itStart++)
             {
                 if ((element == *itStart) && (std::count(checkedPrio.begin(), checkedPrio.end(), element) == 0))
                 {
