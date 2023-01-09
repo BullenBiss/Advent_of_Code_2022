@@ -128,13 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Day1\Day_1.cpp" />
+    <ClCompile Include="..\..\Day2\Day_2.cpp" />
+    <ClCompile Include="..\..\Day3\Day_3.cpp" />
     <ClCompile Include="Advent_of_code.cpp" />
-    <ClCompile Include="Day_1.cpp" />
-    <ClCompile Include="Day_2.cpp" />
-    <ClCompile Include="Day_3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Days.h" />
+    <ClInclude Include="..\..\Days.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
